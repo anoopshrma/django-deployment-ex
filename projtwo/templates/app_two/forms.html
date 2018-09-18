@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+ {%extends 'app_two/base.html'%}
+ {%block body_block%}
+    <div class='container'>
+        <div class='jumbotron'>
+    <h1>Fill out the form!!</h1>
+    
+    <form method="POST">
+    {{info.as_p}}
+    {%csrf_token%}
+    <input type='submit'class='btn btn-primary' value='submit'  >
+    <a  href="{%url 'app_two:userinfo'%}" class='btn btn-primary' >Go to user list</a>
+</form>
+</div>
+</div>
+{%endblock%}

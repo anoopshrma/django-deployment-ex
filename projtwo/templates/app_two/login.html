@@ -1,0 +1,21 @@
+{%extends 'app_two/base.html'%}
+{%block body_block%}
+{%load staticfiles%}
+<div class="container">
+<div class="jumbotron">
+    <h1>Please take and dig ur shit here</h1>
+    <form action="{% url 'app_two:login'%}" method="post">
+        {%csrf_token%}
+        <!-- <label for="username">USERNAME</label>
+        <input type="text" placeholder="enter username",name='username'>-->
+        <label for="testcase">testcase</label> 
+        <input type="text" name="testcase">
+        <label for="password">Password</label>
+        <input type="password", name='password'>
+        <input type="submit",value='login'>
+    </form>
+
+</div>
+</div>
+
+{%endblock%}

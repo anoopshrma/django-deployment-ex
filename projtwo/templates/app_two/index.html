@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+{%extends 'app_two/base.html'%}
+{%block body_block%}
+{%load staticfiles%}
+
+    <h1>user detailss</h1>
+    {%if records%}
+    <div>
+        
+        <div>
+        <ol>
+            {%for i in records%}
+            <li>user deets</li>
+                <ul>
+                    <li>{{i.first_name}}</li>
+                    <li>{{i.last_name}}</li>
+                    <li>{{i.email}}</li>
+                </ul>
+            
+        {%endfor%}   
+        </ol>
+        </div>
+        
+        {%else%}
+        <p>No data found</p>
+
+    </div>
+    {%endif%}
+{%endblock%}
